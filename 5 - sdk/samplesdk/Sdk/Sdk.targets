@@ -1,0 +1,11 @@
+<Project DefaultTargets="Build">
+  <Target Name="Compile">
+    <Message Text="Compiling $(OutputFile)..." Importance="high" />
+  </Target>
+
+  <Target Name="Link" DependsOnTargets="Compile">
+    <Message Text="Linking $(OutputFile)..." Importance="high" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="Link" />
+</Project>

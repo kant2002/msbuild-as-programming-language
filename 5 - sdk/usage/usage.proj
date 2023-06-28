@@ -1,0 +1,11 @@
+<Project Sdk="samplesdk/0.1.0">
+
+    <Target Name="AfterCompile" AfterTargets="Compile">
+        <Message Text="You compile $(OutputFile) and placed it to ..." Importance="high" />
+    </Target>
+
+    <Target Name="AfterLink" AfterTargets="Link">
+        <Message Text="You linking $(OutputFile) ..." Importance="high" />
+    </Target>
+    
+</Project>

@@ -1,0 +1,23 @@
+<Project DefaultTargets="Build">
+  <Target Name="Compile">
+    <Message Text="Compiling $(OutputFile)..." Importance="high" />
+  </Target>
+
+  <Target Name="Link" DependsOnTargets="Compile">
+    <PropertyGroup>
+        <OutputFile>MyApp.cs</OutputFile>
+    </PropertyGroup>
+
+    <Message Text="Linking..." Importance="high" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="Link" />
+
+  <!-- Lets add some juice! -->
+  <Target Name="AfterCompile" AfterTargets="Compile">
+    <Message Text="You compile $(OutputFile) and placed it to ..." Importance="high" />
+  </Target>
+  <Target Name="AfterLink" AfterTargets="Link">
+    <Message Text="You linking $(OutputFile) ..." Importance="high" />
+  </Target>
+</Project>

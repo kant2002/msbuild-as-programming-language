@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.Build.NoTargets/3.5.6">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Description>Provides Sample MSBuild SDK.</Description>
+    <PackageTags>MSBuild MSBuildSdk Sample</PackageTags>
+    <!--
+    <ArtifactsPath>$(BaseArtifactsPath)$(MSBuildProjectName)\</ArtifactsPath>
+    -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageType>MSBuildSdk</PackageType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Sdk\**"
+          Pack="true"
+          PackagePath="Sdk\" />
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+<Project>
+  <Import Project="includes.props" />
+
+    <Target Name="AfterCompile" AfterTargets="Compile">
+        <Message Text="You compile $(OutputFile) and placed it to ..." Importance="high" />
+    </Target>
+    <Target Name="AfterLink" AfterTargets="Link">
+        <Message Text="You linking $(OutputFile) ..." Importance="high" />
+    </Target>
+    
+    <Import Project="includes.targets" />
+</Project>

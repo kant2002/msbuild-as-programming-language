@@ -1,0 +1,5 @@
+<Project>
+    <PropertyGroup>
+        <OutputFile>MyApp.cs</OutputFile>
+    </PropertyGroup>
+</Project>

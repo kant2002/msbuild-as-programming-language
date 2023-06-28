@@ -1,0 +1,24 @@
+<Project DefaultTargets="Build">
+  <Target Name="Compile">
+    <Message Text="Compiling..." Importance="high" />
+  </Target>
+
+  <Target Name="Link" DependsOnTargets="Compile">
+    <Message Text="Linking..." Importance="high" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="Link" />
+
+  <!-- Lets add some juice! -->
+  <Target Name="BeforeCompile" BeforeTargets="Compile">
+    <Message Text="Let's compile your files ..." Importance="high" />
+  </Target>
+  <Target Name="AfterCompile" AfterTargets="Compile">
+    <Message Text="Your compiled files placed to ..." Importance="high" />
+  </Target>
+
+  <!-- Second target with same name is overwriten -->
+  <Target Name="BeforeCompile" BeforeTargets="Compile">
+    <Message Text="Let's compile your files again..." Importance="high" />
+  </Target>
+</Project>

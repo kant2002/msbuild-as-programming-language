@@ -1,0 +1,9 @@
+<Project DefaultTargets="HelloWorld">
+  <Target Name="HelloWorld">
+    <Message Text="Hello .NET Group KZ!" Importance="high" />
+    <Message Text="Hello 1" Importance="high" />
+    <Message Text="Hello 2" Importance="high" />
+    <Message Text="Hello 3" Importance="high" />
+    <Message Text="Hello 4" Importance="high" />
+  </Target>
+</Project>
